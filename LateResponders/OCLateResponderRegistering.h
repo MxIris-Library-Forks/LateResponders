@@ -21,8 +21,15 @@ NS_SWIFT_NAME(LateResponderRegistering)
 
 @interface InterfaceKitViewController (OCLateResponderRegistering)
 
-- (InterfaceKitViewController<OCLateResponderRegistering> *)lateResponderRegisteringViewController;
+- (nullable InterfaceKitViewController<OCLateResponderRegistering> *)lateResponderRegisteringViewController NS_SWIFT_NAME(lateResponderRegisteringViewController());
 
 @end
+
+@interface InterfaceKitResponder (OCLateResponderRegistering)
+
+- (nullable id<OCLateResponderRegistering>)lateResponderRegistering;
+
+@end
+
 
 NS_ASSUME_NONNULL_END

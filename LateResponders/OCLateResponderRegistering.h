@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(LateResponderRegistering)
 @protocol OCLateResponderRegistering <NSObject>
 
 @property (nonatomic, strong, readonly) OCLateResponderRegistry *lateResponderRegistry;

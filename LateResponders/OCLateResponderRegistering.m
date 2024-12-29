@@ -34,7 +34,7 @@
 
 @implementation InterfaceKitResponder (OCLateResponderRegistering)
 
-- (nullable id<OCLateResponderRegistering>)lateResponderRegistering {
+- (nullable InterfaceKitResponder<OCLateResponderRegistering> *)lateResponderRegistering {
     InterfaceKitResponder *c = self;
     
     while (c != nil && ![c conformsToProtocol:@protocol(OCLateResponderRegistering)]) {
@@ -43,12 +43,12 @@
     
     if (c == self) {
         if ([c conformsToProtocol:@protocol(OCLateResponderRegistering)]) {
-            return (id<OCLateResponderRegistering>)self;
+            return (InterfaceKitResponder<OCLateResponderRegistering> *)self;
         } else {
             return nil;
         }
     } else {
-        return (id<OCLateResponderRegistering>)c;
+        return (InterfaceKitResponder<OCLateResponderRegistering> *)c;
     }
     
     

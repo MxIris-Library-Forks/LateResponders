@@ -54,7 +54,7 @@ NS_SWIFT_NAME(LateResponder)
 
 @property (nullable, strong) NSTouchBar *touchBar NS_AVAILABLE_MAC(10.12.2);
 
-#elif TARGET_OS_IOS
+#elif TARGET_OS_IPHONE && !TARGET_OS_WATCH && !TARGET_OS_BRIDGE
 
 @property (nullable, nonatomic, strong) NSArray<UIKeyCommand *> *keyCommands;
 @property (nullable, nonatomic, copy) NSArray<UIKeyCommand *> *__nullable (^keyCommandsBlock)(void);

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(Responder)
 @interface OCResponder : InterfaceKitResponder
 
-#if TARGET_OS_IOS
+#if TARGET_OS_IPHONE && !TARGET_OS_WATCH && !TARGET_OS_BRIDGE
 - (void)setNextResponder:(InterfaceKitResponder * __nullable)nextResponder;
 
 // Apparently there are cases in AppKit where the nextResponder ivar is accessed directly, bypassing the getter so we're not offering this feature on macOS yet
